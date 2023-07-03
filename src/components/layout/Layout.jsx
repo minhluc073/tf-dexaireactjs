@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react"
 import Header1 from "../header/Header1"
-import Header2 from "../header/Header2"
-import Header3 from "../header/Header3"
 import DataBg from "./DataBg"
 
 
-export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children, mainCls }) {
+const Layout = ({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children, mainCls }) => {
     const [scroll, setScroll] = useState(0)
     // Moblile Menu
     const [isMobileMenu, setMobileMenu] = useState(false)
@@ -31,8 +29,7 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
 
             {!headerStyle && <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} />}
             {headerStyle == 1 ? <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} /> : null}
-            {/* {headerStyle == 2 ? <Header2 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} /> : null}
-            {headerStyle == 3 ? <Header3 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} /> : null} */}
+          
             <DataBg />
 
             <main className={mainCls ? mainCls : "main-content"}>
@@ -41,13 +38,7 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
 
                 {children}
             </main>
-
-            {/* {!footerStyle && < Footer1 />}
-            {footerStyle == 1 ? < Footer1 /> : null}
-            {footerStyle == 2 ? < Footer2 /> : null}
-            {footerStyle == 3 ? < Footer3 /> : null}
-
-            <BackToTop /> */}
         </>
     )
 }
+export default Layout

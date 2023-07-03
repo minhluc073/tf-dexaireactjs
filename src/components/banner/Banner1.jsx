@@ -2,10 +2,9 @@ import { Link } from 'react-router-dom'
 import Typewriter from 'typewriter-effect'
 
 
-export default function Banner1() {
+const Banner1 = () => {
     return (
-        <>
-            <section className="banner-area">
+        <section className="banner-area">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -35,8 +34,9 @@ export default function Banner1() {
                         </div>
                     </div>
                 </div>
-            </section>
+        </section>
 
-        </>
     )
 }
+
+export default Banner1;

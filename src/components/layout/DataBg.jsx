@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-export default function DataBg() {
+const DataBg = () => {
     useEffect(() => {
         const elements = document.querySelectorAll('[data-background]')
 
@@ -10,3 +10,4 @@ export default function DataBg() {
     }, [])
     return
 }
+export default DataBg
