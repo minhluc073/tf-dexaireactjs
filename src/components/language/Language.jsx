@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import VideoPopup from 'components/video/VideoPopup'
 
-export default function Language() {
+const Language = () => {
     const [activeIndex, setActiveIndex] = useState(1)
     const handleOnClick = (index) => {
         setActiveIndex(index)
@@ -31,7 +31,7 @@ export default function Language() {
                                                             <stop offset="0.888441" stopColor="#5A71F1" />
                                                             <stop offset={1} stopColor="#439EFF" />
                                                         </linearGradient>
-                                                    </defs>
+                                                    </defs>    
                                                 </svg>
                                             </strong>
                                         </span>
@@ -132,3 +132,4 @@ export default function Language() {
 
     )
 }
+export default Language

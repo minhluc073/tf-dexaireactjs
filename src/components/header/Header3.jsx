@@ -1,10 +1,13 @@
 import LanguageDropdown from "./LanguageDropdown"
+
 import { Link } from "react-router-dom"
 import MenuMobile from "./MenuMobile"
-const Header3 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
+
+
+const Header3 =({ scroll, isMobileMenu, handleMobileMenu })=> {
     return (
             <header>
-                <div id="sticky-header" className={`menu-area transparent-header ${scroll ? "sticky-menu" : ""}`}>
+                <div id="sticky-header" className={`menu-area menu-area-three transparent-header ${scroll ? "sticky-menu" : ""}`}>
                     <div className="container custom-container">
                         <div className="row">
                             <div className="col-12">
@@ -12,15 +15,15 @@ const Header3 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
                                 <div className="menu-wrap">
                                     <nav className="menu-nav">
                                         <div className="logo">
-                                            <Link to="/"><img src="/assets/img/logo/logo.png" alt="Logo" /></Link>
+                                            <Link to="/"><img src="/assets/img/logo/logo03.png" alt="Logo" /></Link>
                                         </div>
                                         <div className="navbar-wrap main-menu d-none d-lg-flex">
                                             <ul className="navigation">
                                                 <li className="active menu-item-has-children tg-mega-menu-has-children"><Link to="#">Home</Link>
-                                                    <div className="tg-mega-menu-wrap black-bg">
+                                                    <div className="tg-mega-menu-wrap black-bg black-bg-two">
                                                         <div className="row row-cols-1 row-cols-lg-4 row-cols-xl-4">
                                                             <div className="col">
-                                                                <div className="mega-menu-item active">
+                                                                <div className="mega-menu-item">
                                                                     <div className="mega-menu-thumb">
                                                                         <Link to="/"><img src="/assets/img/images/home_img01.jpg" alt="" /></Link>
                                                                     </div>
@@ -40,7 +43,7 @@ const Header3 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
                                                                 </div>
                                                             </div>
                                                             <div className="col">
-                                                                <div className="mega-menu-item">
+                                                                <div className="mega-menu-item active">
                                                                     <div className="mega-menu-thumb">
                                                                         <Link to="/index-3"><img src="/assets/img/images/home_img03.jpg" alt="" /></Link>
                                                                     </div>
@@ -88,7 +91,7 @@ const Header3 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
                                                 <li className="header-lang">
                                                     <LanguageDropdown />
                                                 </li>
-                                                <li className="header-btn"><Link to="/login" className="btn">sign up</Link></li>
+                                                <li className="header-btn"><Link to="/login" className="gradient-btn gradient-btn-four">sign up</Link></li>
                                             </ul>
                                         </div>
                                     </nav>
@@ -98,7 +101,7 @@ const Header3 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
                                     <nav className="menu-box">
                                         <div className="close-btn" onClick={handleMobileMenu}><i className="fas fa-times" /></div>
                                         <div className="nav-logo">
-                                            <Link to="/"><img src="/assets/img/logo/logo.png" alt="Logo" /></Link>
+                                            <Link to="/"><img src="/assets/img/logo/logo03.png" alt="Logo" /></Link>
                                         </div>
                                         <div className="menu-outer">
                                             <MenuMobile />

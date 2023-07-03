@@ -4,6 +4,9 @@ import DataBg from "./DataBg"
 import Footer1 from "../footer/Footer1"
 import GoTop from "./GoTop"
 import Header2 from "components/header/Header2"
+import Footer2 from "components/footer/footer2"
+import Header3 from "components/header/Header3"
+import Footer3 from "components/footer/Footer3"
 
 
 const Layout = ({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children, mainCls }) => {
@@ -33,6 +36,7 @@ const Layout = ({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children
             {!headerStyle && <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} />}
             {headerStyle == 1 ? <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} /> : null}
             {headerStyle == 2 ? <Header2 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} /> : null}
+            {headerStyle == 3 ? <Header3 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} /> : null}
 
           
             <DataBg />
@@ -45,6 +49,9 @@ const Layout = ({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children
             </main>
             {!footerStyle && <Footer1 />}
             {footerStyle == 1 ? <Footer1 /> : null}
+            {footerStyle == 2 ? <Footer2 /> : null}
+            {footerStyle == 3 ? <Footer3 /> : null}
+            
             <GoTop />
         </>
     )
