@@ -18,7 +18,7 @@ export default function Header4() {
                                 <div className="menu-wrap">
                                     <nav className="menu-nav">
                                         <div className="logo">
-                                            <Link href="/"><img src="assets/img/logo/logo.png" alt="Logo" /></Link>
+                                            <Link to="/"><img src="assets/img/logo/logo.png" alt="Logo" /></Link>
                                         </div>
                                         <div className="navbar-wrap main-menu d-none">
 
@@ -30,18 +30,18 @@ export default function Header4() {
                                     <nav className="menu-box">
                                         <div className="close-btn" onClick={handleMobileMenu}><i className="fas fa-times" /></div>
                                         <div className="nav-logo">
-                                            <Link href="/"><img src="assets/img/logo/logo.png" alt="Logo" /></Link>
+                                            <Link to="/"><img src="assets/img/logo/logo.png" alt="Logo" /></Link>
                                         </div>
                                         <div className="menu-outer">
                                             <Sidebar />
                                         </div>
                                         <div className="social-links">
                                             <ul className="clearfix list-wrap">
-                                                <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
-                                                <li><Link href="#"><i className="fab fa-twitter" /></Link></li>
-                                                <li><Link href="#"><i className="fab fa-instagram" /></Link></li>
-                                                <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
-                                                <li><Link href="#"><i className="fab fa-youtube" /></Link></li>
+                                                <li><Link to="#"><i className="fab fa-facebook-f" /></Link></li>
+                                                <li><Link to="#"><i className="fab fa-twitter" /></Link></li>
+                                                <li><Link to="#"><i className="fab fa-instagram" /></Link></li>
+                                                <li><Link to="#"><i className="fab fa-linkedin-in" /></Link></li>
+                                                <li><Link to="#"><i className="fab fa-youtube" /></Link></li>
                                             </ul>
                                         </div>
                                     </nav>

@@ -12,40 +12,40 @@ const Header1 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
                                 <div className="menu-wrap">
                                     <nav className="menu-nav">
                                         <div className="logo">
-                                            <Link href="/"><img src="/assets/img/logo/logo.png" alt="Logo" /></Link>
+                                            <Link to="/"><img src="/assets/img/logo/logo.png" alt="Logo" /></Link>
                                         </div>
                                         <div className="navbar-wrap main-menu d-none d-lg-flex">
                                             <ul className="navigation">
-                                                <li className="active menu-item-has-children tg-mega-menu-has-children"><Link href="#">Home</Link>
+                                                <li className="active menu-item-has-children tg-mega-menu-has-children"><Link to="#">Home</Link>
                                                     <div className="tg-mega-menu-wrap black-bg">
                                                         <div className="row row-cols-1 row-cols-lg-4 row-cols-xl-4">
                                                             <div className="col">
                                                                 <div className="mega-menu-item active">
                                                                     <div className="mega-menu-thumb">
-                                                                        <Link href="/"><img src="/assets/img/images/home_img01.jpg" alt="" /></Link>
+                                                                        <Link to="/"><img src="/assets/img/images/home_img01.jpg" alt="" /></Link>
                                                                     </div>
                                                                     <div className="mega-menu-content">
-                                                                        <h4 className="title"><Link href="/">01: Ai Content Writer</Link></h4>
+                                                                        <h4 className="title"><Link to="/">01: Ai Content Writer</Link></h4>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div className="col">
                                                                 <div className="mega-menu-item">
                                                                     <div className="mega-menu-thumb">
-                                                                        <Link href="/index-2"><img src="/assets/img/images/home_img02.jpg" alt="" /></Link>
+                                                                        <Link to="/index-2"><img src="/assets/img/images/home_img02.jpg" alt="" /></Link>
                                                                     </div>
                                                                     <div className="mega-menu-content">
-                                                                        <h4 className="title"><Link href="/index-2">02: Text to Video Ai</Link></h4>
+                                                                        <h4 className="title"><Link to="/index-2">02: Text to Video Ai</Link></h4>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div className="col">
                                                                 <div className="mega-menu-item">
                                                                     <div className="mega-menu-thumb">
-                                                                        <Link href="/index-3"><img src="/assets/img/images/home_img03.jpg" alt="" /></Link>
+                                                                        <Link to="/index-3"><img src="/assets/img/images/home_img03.jpg" alt="" /></Link>
                                                                     </div>
                                                                     <div className="mega-menu-content">
-                                                                        <h4 className="title"><Link href="/index-3">03:Text to Speech Ai</Link></h4>
+                                                                        <h4 className="title"><Link to="/index-3">03:Text to Speech Ai</Link></h4>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -62,25 +62,25 @@ const Header1 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li><Link href="/about">About Us</Link></li>
-                                                <li className="menu-item-has-children"><Link href="#">Pages</Link>
+                                                <li><Link to="/about">About Us</Link></li>
+                                                <li className="menu-item-has-children"><Link to="#">Pages</Link>
                                                     <ul className="sub-menu">
-                                                        <li><Link href="/work">How It Work</Link></li>
-                                                        <li><Link href="/faq">Faq Page</Link></li>
-                                                        <li><Link href="/help">Help Center</Link></li>
-                                                        <li><Link href="/job">Job Page</Link></li>
-                                                        <li><Link href="/job-details">Job Details</Link></li>
-                                                        <li><Link href="/login">Login Page</Link></li>
-                                                        <li><Link href="/404">404 Error Page</Link></li>
+                                                        <li><Link to="/work">How It Work</Link></li>
+                                                        <li><Link to="/faq">Faq Page</Link></li>
+                                                        <li><Link to="/help">Help Center</Link></li>
+                                                        <li><Link to="/job">Job Page</Link></li>
+                                                        <li><Link to="/job-details">Job Details</Link></li>
+                                                        <li><Link to="/login">Login Page</Link></li>
+                                                        <li><Link to="/404">404 Error Page</Link></li>
                                                     </ul>
                                                 </li>
-                                                <li className="menu-item-has-children"><Link href="#">News</Link>
+                                                <li className="menu-item-has-children"><Link to="#">News</Link>
                                                     <ul className="sub-menu">
-                                                        <li><Link href="/blog">Our Blog</Link></li>
-                                                        <li><Link href="/blog-details">Blog Details</Link></li>
+                                                        <li><Link to="/blog">Our Blog</Link></li>
+                                                        <li><Link to="/blog-details">Blog Details</Link></li>
                                                     </ul>
                                                 </li>
-                                                <li><Link href="/contact">contacts</Link></li>
+                                                <li><Link to="/contact">contacts</Link></li>
                                             </ul>
                                         </div>
                                         <div className="header-action d-none d-md-block">
@@ -88,7 +88,7 @@ const Header1 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
                                                 <li className="header-lang">
                                                     <LanguageDropdown />
                                                 </li>
-                                                <li className="header-btn"><Link href="/login" className="btn">sign up</Link></li>
+                                                <li className="header-btn"><Link to="/login" className="btn">sign up</Link></li>
                                             </ul>
                                         </div>
                                     </nav>
@@ -98,18 +98,18 @@ const Header1 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
                                     <nav className="menu-box">
                                         <div className="close-btn" onClick={handleMobileMenu}><i className="fas fa-times" /></div>
                                         <div className="nav-logo">
-                                            <Link href="/"><img src="/assets/img/logo/logo.png" alt="Logo" /></Link>
+                                            <Link to="/"><img src="/assets/img/logo/logo.png" alt="Logo" /></Link>
                                         </div>
                                         <div className="menu-outer">
                                             <MenuMobile />
                                         </div>
                                         <div className="social-links">
                                             <ul className="clearfix list-wrap">
-                                                <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
-                                                <li><Link href="#"><i className="fab fa-twitter" /></Link></li>
-                                                <li><Link href="#"><i className="fab fa-instagram" /></Link></li>
-                                                <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
-                                                <li><Link href="#"><i className="fab fa-youtube" /></Link></li>
+                                                <li><Link to="#"><i className="fab fa-facebook-f" /></Link></li>
+                                                <li><Link to="#"><i className="fab fa-twitter" /></Link></li>
+                                                <li><Link to="#"><i className="fab fa-instagram" /></Link></li>
+                                                <li><Link to="#"><i className="fab fa-linkedin-in" /></Link></li>
+                                                <li><Link to="#"><i className="fab fa-youtube" /></Link></li>
                                             </ul>
                                         </div>
                                     </nav>

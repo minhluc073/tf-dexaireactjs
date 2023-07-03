@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react"
 import Header1 from "../header/Header1"
 import DataBg from "./DataBg"
+import Footer1 from "../footer/Footer1"
+import GoTop from "./GoTop"
+import Header2 from "components/header/Header2"
 
 
 const Layout = ({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children, mainCls }) => {
@@ -29,6 +32,8 @@ const Layout = ({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children
 
             {!headerStyle && <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} />}
             {headerStyle == 1 ? <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} /> : null}
+            {headerStyle == 2 ? <Header2 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} /> : null}
+
           
             <DataBg />
 
@@ -38,6 +43,9 @@ const Layout = ({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children
 
                 {children}
             </main>
+            {!footerStyle && <Footer1 />}
+            {footerStyle == 1 ? <Footer1 /> : null}
+            <GoTop />
         </>
     )
 }

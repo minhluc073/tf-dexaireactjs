@@ -4,9 +4,17 @@ import { Route, Routes } from "react-router-dom";
 import routes from "./pages/index";
 import { useEffect, useState } from "react";
 import Preloader from "components/preloader/Preloader";
+import AOS from 'aos';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    AOS.init({
+      duration : 2000
+    }); 
+  }, []);
+
+  
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);

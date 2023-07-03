@@ -48,7 +48,7 @@ const Writing = () => {
                   Unlike anything you've experienced - unique and unimaginable
                   capabilities.
                 </p>
-                <Link href="/work" className="link-btn">
+                <Link to="/work" className="link-btn">
                   Try Gpt-3.5 language
                   <i className="far fa-arrow-right" />
                 </Link>
@@ -89,7 +89,7 @@ const Writing = () => {
                   Unlike anything you've experienced - unique and unimaginable
                   capabilities.
                 </p>
-                <Link href="/work" className="link-btn">
+                <Link to="/work" className="link-btn">
                   Try use of AI
                   <i className="far fa-arrow-right" />
                 </Link>
@@ -130,7 +130,7 @@ const Writing = () => {
                   Unlike anything you've experienced - unique and unimaginable
                   capabilities.
                 </p>
-                <Link href="/work" className="link-btn">
+                <Link to="/work" className="link-btn">
                   Try conversions
                   <i className="far fa-arrow-right" />
                 </Link>
@@ -171,7 +171,7 @@ const Writing = () => {
                   Unlike anything you've experienced - unique and unimaginable
                   capabilities.
                 </p>
-                <Link href="/work" className="link-btn">
+                <Link to="/work" className="link-btn">
                   Try supports languages
                   <i className="far fa-arrow-right" />
                 </Link>
@@ -212,7 +212,7 @@ const Writing = () => {
                   Unlike anything you've experienced - unique and unimaginable
                   capabilities.
                 </p>
-                <Link href="/work" className="link-btn">
+                <Link to="/work" className="link-btn">
                   Try streamline
                   <i className="far fa-arrow-right" />
                 </Link>
@@ -253,7 +253,7 @@ const Writing = () => {
                   Unlike anything you've experienced - unique and unimaginable
                   capabilities.
                 </p>
-                <Link href="/work" className="link-btn">
+                <Link to="/work" className="link-btn">
                   Try powerful settings
                   <i className="far fa-arrow-right" />
                 </Link>
