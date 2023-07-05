@@ -1,7 +1,25 @@
-import { Link } from 'react-router-dom'
-import { useState } from "react"
+import { Link, useLocation } from 'react-router-dom'
+import { useState, useEffect, useCallback } from "react"
 
 function MenuMobile() {
+    // active menu current
+    const { pathname } = useLocation();
+    const [current, setCurrent] = useState("home");
+
+    useEffect(() => {
+        if (pathname) {
+          let activePath = pathname.slice(1, pathname.length);
+          setCurrent(activePath ? activePath : "home");
+        }
+      }, [pathname]);
+
+      const handleCurrent = useCallback(
+        (param = "") => {
+          setCurrent(param);
+        },
+        [current]
+      );
+
     const [isActive, setIsActive] = useState({
         status: false,
         key: "",
@@ -21,11 +39,13 @@ function MenuMobile() {
     }
     return (
         <ul className="navigation">
-                <li className="active menu-item-has-children tg-mega-menu-has-children"><Link to="/#">Home</Link>
+                <li className={`${current === "home" ? "active" : "" } menu-item-has-children tg-mega-menu-has-children`}
+                     onClick={() => handleCurrent("home")}
+                ><Link to="/#">Home</Link>
                     <div className="tg-mega-menu-wrap black-bg" style={{ display: `${isActive.key == 1 ? "block" : "none"}` }}>
                         <div className="row row-cols-1 row-cols-lg-4 row-cols-xl-4">
                             <div className="col">
-                                <div className="mega-menu-item active">
+                                <div className="mega-menu-item">
                                     <div className="mega-menu-thumb">
                                         <Link to="/"><img src="assets/img/images/home_img01.jpg" alt="" /></Link>
                                     </div>

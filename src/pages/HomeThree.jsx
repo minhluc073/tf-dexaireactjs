@@ -1,13 +1,14 @@
-import Testimonial3 from "components/Testimonial/Testimonial3";
-import About2 from "components/about/About2";
-import Banner3 from "components/banner/Banner3";
-import Brand2 from "components/brand/Brand2";
-import Cta from "components/cta/Cta";
 import Layout from "components/layout/Layout";
-import Pricing3 from "components/pricing/Pricing3";
-import Services2 from "components/services/Services2";
-import Speech from "components/speech/Speech";
-import Voices from "components/voice/Voices";
+import About2 from "components/layout/about/About2";
+import Banner3 from "components/layout/banner/Banner3";
+import Brand2 from "components/layout/brand/Brand2";
+import Cta from "components/layout/cta/Cta";
+import Pricing3 from "components/layout/pricing/Pricing3";
+import Services2 from "components/layout/services/Services2";
+import Speech from "components/layout/speech/Speech";
+import Testimonial3 from "components/layout/testimonial/Testimonial3";
+import Voices from "components/layout/voice/Voices";
+
 
 const HomeThree = () => {
     return (

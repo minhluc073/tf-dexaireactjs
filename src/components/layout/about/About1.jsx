@@ -1,5 +1,5 @@
-import { useState } from "react";
 import VideoPopup from "components/video/VideoPopup";
+import { useState } from "react";
 
 export default function About1() {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -31,7 +31,7 @@ export default function About1() {
                       <div className="about-content">
                         <div className="section-title-two mb-60">
                           <h2 className="title">
-                            Used by over&nbsp; 
+                            Used by over&nbsp;
                             <span>
                               <strong>
                                 40,000
@@ -121,7 +121,7 @@ export default function About1() {
                       <div className="about-content">
                         <div className="section-title-two mb-60">
                           <h2 className="title">
-                            Used by over&nbsp; 
+                            Used by over&nbsp;
                             <span>
                               <strong>
                                 40,000
@@ -211,7 +211,7 @@ export default function About1() {
                       <div className="about-content">
                         <div className="section-title-two mb-60">
                           <h2 className="title">
-                            Used by over&nbsp;  
+                            Used by over&nbsp;
                             <span>
                               <strong>
                                 40,000

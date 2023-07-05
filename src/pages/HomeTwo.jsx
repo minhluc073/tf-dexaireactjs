@@ -1,14 +1,15 @@
 import Layout from "components/layout/Layout";
-import Banner2 from "components/banner/Banner2";
-import Features from "components/features/Features";
-import Brand1 from "components/brand/Brand1";
-import Compare from "components/compare/Compare";
-import About1 from "components/about/About1";
-import Testimonial2 from "components/Testimonial/Testimonial2";
-import Services1 from "components/services/Services1";
-import Language from "components/language/Language";
-import Pricing2 from "components/pricing/Pricing2";
-import Counter2 from "components/counter/Counter2";
+import About1 from "components/layout/about/About1";
+import Banner2 from "components/layout/banner/Banner2";
+import Brand1 from "components/layout/brand/Brand1";
+import Compare from "components/layout/compare/Compare";
+import Counter2 from "components/layout/counter/Counter2";
+import Features from "components/layout/features/Features";
+import Language from "components/layout/language/Language";
+import Pricing2 from "components/layout/pricing/Pricing2";
+import Services1 from "components/layout/services/Services1";
+import Testimonial2 from "components/layout/testimonial/Testimonial2";
+
 
 const HoweTwo = () => {
     return (

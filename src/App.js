@@ -4,18 +4,14 @@ import { Route, Routes } from "react-router-dom";
 import routes from "./pages/index";
 import { useEffect, useState } from "react";
 import Preloader from "components/preloader/Preloader";
-import AOS from 'aos';
+import AOS from "aos";
 
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     AOS.init({
-      duration : 2000
-    }); 
-  }, []);
-
-  
-  useEffect(() => {
+      duration: 2000,
+    });
     setTimeout(() => {
       setLoading(false);
     }, 1000);
@@ -33,6 +29,7 @@ function App() {
               key={index}
             />
           ))}
+          {/* <Route path='*' element={<Page404 />} /> */}
         </Routes>
       ) : (
         <Preloader />

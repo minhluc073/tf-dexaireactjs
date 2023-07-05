@@ -975,6 +975,10 @@ label {
     color  : var(--tg-black-two);
     padding: 15px 27px;
 }
+.menu-area-two .mobile-menu .tg-mega-menu-wrap.black-bg .mega-menu-content .title a,
+.menu-area-two .mobile-menu .tg-mega-menu-wrap.black-bg .mega-menu-content .title {
+    color  : var(--tg-black-two);
+}
 
 .menu-area-two .header-action .header-lang img {
     width        : 24px;
@@ -4899,7 +4903,9 @@ label {
     box-shadow   : 0px 42px 76px rgba(0, 4, 43, 0.5);
     border-radius: 10px;
 }
-
+.accordion-header {
+    transition: 0.2s ease-in-out;
+}
 .faq-wrap .accordion-button::after {
     flex-shrink     : 0;
     width           : auto;
