@@ -116,7 +116,10 @@ function MenuMobile({ handleCloseMenu }) {
         <h5 onClick={() => handleToggle(2)}>Pages</h5>
         <ul
           className="sub-menu"
-          style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}
+          style={{
+            display: `${isActive.key == 2 ? "block" : "none"}`,
+            transition: "all 700ms ease",
+          }}
         >
           <li onClick={handleCloseMenu}>
             <Link to="/work">How It Work</Link>

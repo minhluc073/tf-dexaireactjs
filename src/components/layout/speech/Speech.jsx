@@ -126,6 +126,16 @@ const Speech = () => {
       padding: "6px 10px",
       color: "f0f0f0",
     }),
+
+    menu: (base) => ({
+      ...base,
+      padding: "0px 4px",
+      borderRadius: "5px",
+      width: "100%",
+      border: "1px solid #393A3D",
+      backgroundColor: "#222325",
+      boxShadow: "none",
+    }),
   };
 
   return (
@@ -141,6 +151,7 @@ const Speech = () => {
                       <Select
                         defaultValue={countries[0]}
                         value={selectCountry}
+                        className="react-select-2-listbox"
                         // onChange={handleSelectCountry}
                         options={countries}
                         isSearchable={false}

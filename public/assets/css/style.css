@@ -1168,7 +1168,8 @@ label {
     right: 15px;
     top: 28px;
     line-height: 30px;
-    width: 35px;
+    width: 40px;
+    height: 40px;
     text-align: center;
     font-size: 20px;
     color: var(--tg-white);
@@ -1197,6 +1198,11 @@ label {
 .mobile-menu .navigation ul {
     padding: 0;
     margin: 0;
+    transition: all 700ms ease;
+    -moz-transition: all 700ms ease;
+    -webkit-transition: all 700ms ease;
+    -ms-transition: all 700ms ease;
+    -o-transition: all 700ms ease;
 }
 
 .mobile-menu .navigation li {
@@ -2941,21 +2947,6 @@ label {
     margin-bottom: 0;
     color: var(--tg-gray-four);
     text-overflow: ellipsis;
-
-}
-
-#react-select-2-listbox,
-#react-select-3-listbox,
-#react-select-4-listbox,
-#react-select-5-listbox,
-#react-select-6-listbox {
-    padding: 0px 4px;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: var(--tg-black-four) !important;
-    border-radius: 5px;
-    color: var(--tg-white);
-    border: 1px solid #393A3D !important;
 
 }
 
