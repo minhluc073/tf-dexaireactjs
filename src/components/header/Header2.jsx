@@ -115,7 +115,7 @@ const Header2 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
                                             <Link to="/"><img src="/assets/img/logo/logo02.png" alt="Logo" /></Link>
                                         </div>
                                         <div className="menu-outer">
-                                            <MenuMobile />
+                                            <MenuMobile handleCloseMenu={handleMobileMenu}/>
                                         </div>
                                         <div className="social-links">
                                             <ul className="clearfix list-wrap">

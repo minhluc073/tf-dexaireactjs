@@ -1,7 +1,133 @@
 import { useState } from "react";
+import Select from "react-select";
+import chroma from "chroma-js";
+
+const countries = [
+  {
+    value: "us",
+    label: "English (American)",
+    image: "assets/img/images/flag01.png",
+  },
+  {
+    value: "uk",
+    label: "English (British)",
+    image: "/assets/img/images/s_voice_img02.png",
+  },
+  {
+    value: "bd",
+    label: "Bengali (Bangladesh)",
+    image: "assets/img/images/flag03.png",
+  },
+  {
+    value: "ca",
+    label: "English (Canada)",
+    image: "assets/img/images/flag04.png",
+  },
+  {
+    value: "za",
+    label: "Zulu (South Africa)",
+    image: "assets/img/images/flag05.png",
+  },
+  {
+    value: "in",
+    label: "Hindi (India)",
+    image: "assets/img/images/flag06.png",
+  },
+];
+const voices = [
+  {
+    value: "v1",
+    label: "Amber (HD)",
+    image: "assets/img/images/s_voice_img01.png",
+  },
+  {
+    value: "v2",
+    label: "Brandon (HD)",
+    image: "/assets/img/images/s_voice_img02.png",
+  },
+  {
+    value: "v3",
+    label: "Tony (HD)",
+    image: "assets/img/images/s_voice_img03.png",
+  },
+  {
+    value: "v4",
+    label: "Michael (HD)",
+    image: "assets/img/images/s_voice_img04.png",
+  },
+  {
+    value: "v5",
+    label: "Sara (HD)",
+    image: "assets/img/images/s_voice_img05.png",
+  },
+  {
+    value: "v6",
+    label: "Prabhat (HD)",
+    image: "assets/img/images/s_voice_img06.png",
+  },
+];
+const punctuation = [
+  {
+    value: "v1",
+    label: "Punctuation: Auto",
+  },
+  {
+    value: "v2",
+    label: "Punctuation: Off",
+  },
+  {
+    value: "v3",
+    label: "Punctuation: On",
+  },
+];
+const filter = [
+  {
+    value: "v1",
+    label: "Profanity Filter: On",
+  },
+  {
+    value: "v2",
+    label: "Profanity Filter: Off",
+  },
+];
 const Speech = () => {
   const [isToggled, setToggled] = useState(false);
   const toggleTrueFalse = () => setToggled(!isToggled);
+
+  const [selectCountry, setSelectCountry] = useState();
+  const [selectVoice, setSelectVoice] = useState();
+  const [selectPunctuation, setSelectPunctuation] = useState();
+  const [selectFilter, setSelectFilter] = useState();
+  // const handleSelectCountry = (selected) => {
+  // };
+
+  const colourStyles = {
+    control: (styles) => ({
+      ...styles,
+      backgroundColor: "transparent",
+      borderColor: "#393A3D",
+      borderRadius: "5px",
+      height: "50px",
+      boxShadow: "none",
+      ":hover": {
+        borderColor: "#393A3D",
+      },
+    }),
+    option: (styles) => ({
+      ...styles,
+      backgroundColor: "transparent",
+      transition: "all 0.3s ease-out 0s",
+      ":hover": {
+        backgroundColor: "#00C39A !important",
+      },
+      ":active": {
+        backgroundColor: "#00C39A !important",
+      },
+      padding: "6px 10px",
+      color: "f0f0f0",
+    }),
+  };
+
   return (
     <section className="speech-area">
       <div className="container">
@@ -12,53 +138,38 @@ const Speech = () => {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="lang-ordering">
-                      <select id="id_select2_example" style={{ width: "100%" }}>
-                        <option data-img_src="/assets/img/images/flag01.png">
-                          English (American)
-                        </option>
-                        <option data-img_src="/assets/img/images/flag02.png">
-                          English (British)
-                        </option>
-                        <option data-img_src="/assets/img/images/flag03.png">
-                          Bengali (Bangladesh)
-                        </option>
-                        <option data-img_src="/assets/img/images/flag04.png">
-                          English (Canada)
-                        </option>
-                        <option data-img_src="/assets/img/images/flag05.png">
-                          Zulu (South Africa)
-                        </option>
-                        <option data-img_src="/assets/img/images/flag06.png">
-                          Hindi (India)
-                        </option>
-                      </select>
+                      <Select
+                        defaultValue={countries[0]}
+                        value={selectCountry}
+                        // onChange={handleSelectCountry}
+                        options={countries}
+                        isSearchable={false}
+                        styles={colourStyles}
+                        formatOptionLabel={(country) => (
+                          <div className="react-select-option">
+                            <img src={country.image} alt="country-image" />
+                            <p>{country.label}</p>
+                          </div>
+                        )}
+                      />
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="voice-ordering">
-                      <select
-                        id="id_select2_example_two"
-                        style={{ width: "100%" }}
-                      >
-                        <option data-img_src="/assets/img/images/s_voice_img01.png">
-                          Amber (HD)
-                        </option>
-                        <option data-img_src="/assets/img/images/s_voice_img02.png">
-                          Brandon (HD)
-                        </option>
-                        <option data-img_src="/assets/img/images/s_voice_img03.png">
-                          Tony (HD)
-                        </option>
-                        <option data-img_src="/assets/img/images/s_voice_img04.png">
-                          Michael (HD)
-                        </option>
-                        <option data-img_src="/assets/img/images/s_voice_img05.png">
-                          Sara (HD)
-                        </option>
-                        <option data-img_src="/assets/img/images/s_voice_img06.png">
-                          Prabhat (HD)
-                        </option>
-                      </select>
+                      <Select
+                        defaultValue={voices[0]}
+                        value={selectVoice}
+                        // onChange={handleSelectCountry}
+                        options={voices}
+                        isSearchable={false}
+                        styles={colourStyles}
+                        formatOptionLabel={(voices) => (
+                          <div className="react-select-option">
+                            <img src={voices.image} alt="voice-img" />
+                            <p>{voices.label}</p>
+                          </div>
+                        )}
+                      />
                     </div>
                   </div>
                 </div>
@@ -122,49 +233,54 @@ const Speech = () => {
                   </div>
                   <div className="col-md-6">
                     <div className="form-grp">
-                      <select
-                        id="punctuation-select2"
-                        style={{ width: "100%" }}
-                      >
-                        <option value={1}>Punctuation: Auto</option>
-                        <option value={2}>Punctuation: Off</option>
-                        <option value={3}>Punctuation: On</option>
-                      </select>
+                      <Select
+                        defaultValue={punctuation[0]}
+                        value={selectPunctuation}
+                        // onChange={handleSelectCountry}
+                        options={punctuation}
+                        isSearchable={false}
+                        styles={colourStyles}
+                        formatOptionLabel={(punctuation) => (
+                          <div className="react-select-option">
+                            <p>{punctuation.label}</p>
+                          </div>
+                        )}
+                      />
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="form-grp">
-                      <select id="profanity-select2" style={{ width: "100%" }}>
-                        <option value={1}>Profanity Filter: On</option>
-                        <option value={2}>Profanity Filter: Off</option>
-                      </select>
+                      <Select
+                        defaultValue={filter[0]}
+                        value={selectFilter}
+                        // onChange={handleSelectCountry}
+                        options={filter}
+                        isSearchable={false}
+                        styles={colourStyles}
+                        formatOptionLabel={(filter) => (
+                          <div className="react-select-option">
+                            <p>{filter.label}</p>
+                          </div>
+                        )}
+                      />
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="form-grp">
-                      <select
-                        id="id_select2_example_three"
-                        style={{ width: "100%" }}
-                      >
-                        <option data-img_src="/assets/img/images/flag01.png">
-                          English (American)
-                        </option>
-                        <option data-img_src="/assets/img/images/flag02.png">
-                          English (British)
-                        </option>
-                        <option data-img_src="/assets/img/images/flag03.png">
-                          Bengali (Bangladesh)
-                        </option>
-                        <option data-img_src="/assets/img/images/flag04.png">
-                          English (Canada)
-                        </option>
-                        <option data-img_src="/assets/img/images/flag05.png">
-                          Zulu (South Africa)
-                        </option>
-                        <option data-img_src="/assets/img/images/flag06.png">
-                          Hindi (India)
-                        </option>
-                      </select>
+                      <Select
+                        defaultValue={countries[0]}
+                        value={selectCountry}
+                        // onChange={handleSelectCountry}
+                        options={countries}
+                        isSearchable={false}
+                        styles={colourStyles}
+                        formatOptionLabel={(country) => (
+                          <div className="react-select-option">
+                            <img src={country.image} alt="country-image" />
+                            <p>{country.label}</p>
+                          </div>
+                        )}
+                      />
                     </div>
                   </div>
                 </div>

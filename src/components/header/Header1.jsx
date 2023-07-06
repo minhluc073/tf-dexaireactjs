@@ -266,13 +266,13 @@ const Header1 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
                   <div className="close-btn" onClick={handleMobileMenu}>
                     <i className="fas fa-times" />
                   </div>
-                  <div className="nav-logo">
+                  <div className="nav-logo" onClick={handleMobileMenu}>
                     <Link to="/">
                       <img src="/assets/img/logo/logo.png" alt="Logo" />
                     </Link>
                   </div>
                   <div className="menu-outer">
-                    <MenuMobile />
+                    <MenuMobile handleCloseMenu={handleMobileMenu}/>
                   </div>
                   <div className="social-links">
                     <ul className="clearfix list-wrap">

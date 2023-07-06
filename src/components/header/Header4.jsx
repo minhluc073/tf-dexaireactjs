@@ -44,7 +44,7 @@ const Header4 = () => {
                     </Link>
                   </div>
                   <div className="menu-outer">
-                    <MenuMobile />
+                    <MenuMobile handleCloseMenu={handleMobileMenu}/>
                   </div>
                   <div className="social-links">
                     <ul className="clearfix list-wrap">
