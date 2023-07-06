@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import RangeSlider from "react-range-slider-input";
+import "react-range-slider-input/dist/style.css";
 
 const UseCases = () => {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -28,33 +30,122 @@ const UseCases = () => {
             <div className="use-cases-nav-wrap">
               <ul className="nav nav-tabs" id="myTab" role="tablist">
                 <li className="nav-item" onClick={() => handleOnClick(1)}>
-                  <button className={ activeIndex == 1 ? "nav-link active" : "nav-link" }>
+                  <button
+                    className={
+                      activeIndex == 1 ? "nav-link active" : "nav-link"
+                    }
+                  >
                     Website
                   </button>
                 </li>
                 <li className="nav-item" onClick={() => handleOnClick(2)}>
-                  <button className={ activeIndex == 2 ? "nav-link active" : "nav-link" }>
+                  <button
+                    className={
+                      activeIndex == 2 ? "nav-link active" : "nav-link"
+                    }
+                  >
                     Social Media
                   </button>
                 </li>
                 <li className="nav-item" onClick={() => handleOnClick(3)}>
-                  <button className={ activeIndex == 3 ? "nav-link active" : "nav-link" }>
+                  <button
+                    className={
+                      activeIndex == 3 ? "nav-link active" : "nav-link"
+                    }
+                  >
                     Emails
                   </button>
                 </li>
                 <li className="nav-item" onClick={() => handleOnClick(4)}>
-                  <button className={ activeIndex == 4 ? "nav-link active" : "nav-link" }>
+                  <button
+                    className={
+                      activeIndex == 4 ? "nav-link active" : "nav-link"
+                    }
+                  >
                     Code
                   </button>
                 </li>
                 <li className="nav-item" onClick={() => handleOnClick(5)}>
-                  <button className={ activeIndex == 5 ? "nav-link active" : "nav-link" }>
+                  <button
+                    className={
+                      activeIndex == 5 ? "nav-link active" : "nav-link"
+                    }
+                  >
                     Art
                   </button>
                 </li>
               </ul>
               <div className="tab-content" id="myTabContent">
-                <div className={ activeIndex == 1 ? "tab-pane fade show active" : "tab-pane fade" } >
+                <div
+                  className={
+                    activeIndex == 1
+                      ? "tab-pane fade show active"
+                      : "tab-pane fade"
+                  }
+                >
+                  <div className="cases-details-wrap">
+                    <div className="cases-details-left">
+                      {/* <img src="/assets/img/images/cases_img01.png" alt="" /> */}
+                      <p>Keywords</p>
+                      <input type="text" placeholder="AI 2023" />
+                      <p>Creativity</p>
+                      <RangeSlider
+                        className="single-thumb"
+                        defaultValue={[0, 60]}
+                        thumbsDisabled={[true, false]}
+                        rangeSlideDisabled={true}
+                        onThumbDragStart={false}
+                      />
+                    </div>
+                    <div className="cases-details-content">
+                      <div className="icon">
+                        <i className="fas fa-home-alt" />
+                      </div>
+                      <p>
+                        Meta description: Unlock the power of AI to automate
+                        your business with Since AI. Our suite of AI-powered
+                        solutions can help streamline your operations and
+                        increase efficiency.
+                      </p>
+                      <div className="content-bottom">
+                        <ul className="list-wrap">
+                          <li>
+                            <Link to="#">
+                              <i className="far fa-copy" />
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="#">
+                              <i className="fal fa-download" />
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="#">
+                              <i className="fal fa-paste" />
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="#">
+                              <i className="far fa-trash-alt" />
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="#">
+                              <i className="fal fa-plus-circle" />
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className={
+                    activeIndex == 2
+                      ? "tab-pane fade show active"
+                      : "tab-pane fade"
+                  }
+                >
                   <div className="cases-details-wrap">
                     <div className="cases-details-img">
                       <img src="/assets/img/images/cases_img01.png" alt="" />
@@ -101,7 +192,13 @@ const UseCases = () => {
                     </div>
                   </div>
                 </div>
-                <div className={ activeIndex == 2 ? "tab-pane fade show active" : "tab-pane fade"} >
+                <div
+                  className={
+                    activeIndex == 3
+                      ? "tab-pane  fade show active"
+                      : "tab-pane fade"
+                  }
+                >
                   <div className="cases-details-wrap">
                     <div className="cases-details-img">
                       <img src="/assets/img/images/cases_img01.png" alt="" />
@@ -148,7 +245,13 @@ const UseCases = () => {
                     </div>
                   </div>
                 </div>
-                <div className={ activeIndex == 3 ? "tab-pane  fade show active" : "tab-pane fade"}>                
+                <div
+                  className={
+                    activeIndex == 4
+                      ? "tab-pane  fade show active"
+                      : "tab-pane fade"
+                  }
+                >
                   <div className="cases-details-wrap">
                     <div className="cases-details-img">
                       <img src="/assets/img/images/cases_img01.png" alt="" />
@@ -195,54 +298,13 @@ const UseCases = () => {
                     </div>
                   </div>
                 </div>
-                <div className={ activeIndex == 4 ? "tab-pane  fade show active" : "tab-pane fade"}>
-                  <div className="cases-details-wrap">
-                    <div className="cases-details-img">
-                      <img src="/assets/img/images/cases_img01.png" alt="" />
-                    </div>
-                    <div className="cases-details-content">
-                      <div className="icon">
-                        <i className="fas fa-home-alt" />
-                      </div>
-                      <p>
-                        Meta description: Unlock the power of AI to automate
-                        your business with Since AI. Our suite of AI-powered
-                        solutions can help streamline your operations and
-                        increase efficiency.
-                      </p>
-                      <div className="content-bottom">
-                        <ul className="list-wrap">
-                          <li>
-                            <Link to="#">
-                              <i className="far fa-copy" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="#">
-                              <i className="fal fa-download" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="#">
-                              <i className="fal fa-paste" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="#">
-                              <i className="far fa-trash-alt" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="#">
-                              <i className="fal fa-plus-circle" />
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className={ activeIndex == 5 ? "tab-pane  fade show active" : "tab-pane fade"}>
+                <div
+                  className={
+                    activeIndex == 5
+                      ? "tab-pane  fade show active"
+                      : "tab-pane fade"
+                  }
+                >
                   <div className="cases-details-wrap">
                     <div className="cases-details-img">
                       <img src="/assets/img/images/cases_img01.png" alt="" />
@@ -296,5 +358,6 @@ const UseCases = () => {
       </div>
     </section>
   );
-}
-export default UseCases
+};
+
+export default UseCases;
