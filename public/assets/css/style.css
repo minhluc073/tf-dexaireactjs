@@ -3282,13 +3282,23 @@ label {
 
 /* custom style */
 .cases-details-left {
-    /* width: 450px;
-    height: 372px; */
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 30px;
-    padding: 50px 50px 40px;
-    width: 450px;
+    padding: 45px;
+    max-width: 450px;
     background: linear-gradient(89.78deg, rgba(200 189 255 / 20%) -31.69%, rgba(186 166 255 / 20%) -22.78%, rgba(103 33 255 / 20%) 27.93%, rgba(0 203 255 / 20%) 99.79%);
+
+}
+
+.cases-details-left .gradient-btn {
+    width: 100%;
+    text-transform: capitalize;
+    padding: 13px;
+}
+
+.cases-details-left .gradient-btn::after {
+    content: "\f105";
+    transform: none;
 
 }
 
@@ -3296,20 +3306,20 @@ label {
     font-weight: 500;
     font-size: 18px;
     color: var(--tg-white);
+    margin-bottom: 3px;
 }
 
 .cases-details-left input {
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0.02em;
     color: var(--tg-white);
     background: rgba(230, 238, 251, 0.08);
     border: 1px solid rgba(230, 238, 251, 0.13);
     border-radius: 5px;
-    padding: 8px;
-    /* height: 50px; */
+    padding: 6px 10px;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 /* Range Slider as a Single Thumb Slider */
@@ -3336,16 +3346,21 @@ label {
     background-color: var(--tg-primary-color);
 }
 
+.cases-details-left .group-language {
+    margin: 18px 0px;
+    display: flex;
+    gap: 20px;
+}
 
+.cases-details-left .group-language .inner-left input {
+    width: 82px;
+}
 
 .single-thumb.range-slider>input {
     visibility: hidden;
 }
 
-/* Vertical Range Slider */
-.vertical-slider[data-vertical] {
-    height: 10px;
-}
+
 
 .cases-details-wrap .cases-details-img img {
     border-radius: 30px;
@@ -3474,6 +3489,35 @@ label {
     display: flex;
     align-items: center;
 }
+
+/* .roadmap-timeline-wrap .roadmap-item .roadmap-img {
+    max-width: 574px;
+    height: 566px;
+}
+
+.roadmap-timeline-wrap .roadmap-item .box-roadmap {
+    background: rgba(255, 255, 255, 0.1);
+    max-width: 574px;
+    height: 566px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.roadmap-timeline-wrap .roadmap-item .box-roadmap .inner {
+    border-radius: 20px;
+    padding: 30px;
+
+    background: linear-gradient(89.78deg, rgba(200 189 255 / 20%) -31.69%, rgba(186 166 255 / 20%) -22.78%, rgba(103 33 255 / 20%) 27.93%, rgba(0 203 255 / 20%) 99.79%);
+
+}
+
+.roadmap-timeline-wrap .roadmap-item .box-roadmap svg {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+} */
 
 .roadmap-item .roadmap-img {
     position: relative;

@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import RangeSlider from "react-range-slider-input";
-import "react-range-slider-input/dist/style.css";
+import TabLeft from "./TabLeft";
 
 const UseCases = () => {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -84,19 +83,7 @@ const UseCases = () => {
                   }
                 >
                   <div className="cases-details-wrap">
-                    <div className="cases-details-left">
-                      {/* <img src="/assets/img/images/cases_img01.png" alt="" /> */}
-                      <p>Keywords</p>
-                      <input type="text" placeholder="AI 2023" />
-                      <p>Creativity</p>
-                      <RangeSlider
-                        className="single-thumb"
-                        defaultValue={[0, 60]}
-                        thumbsDisabled={[true, false]}
-                        rangeSlideDisabled={true}
-                        onThumbDragStart={false}
-                      />
-                    </div>
+                    <TabLeft />
                     <div className="cases-details-content">
                       <div className="icon">
                         <i className="fas fa-home-alt" />
@@ -148,7 +135,7 @@ const UseCases = () => {
                 >
                   <div className="cases-details-wrap">
                     <div className="cases-details-img">
-                      <img src="/assets/img/images/cases_img01.png" alt="" />
+                      <TabLeft />
                     </div>
                     <div className="cases-details-content">
                       <div className="icon">
@@ -201,7 +188,7 @@ const UseCases = () => {
                 >
                   <div className="cases-details-wrap">
                     <div className="cases-details-img">
-                      <img src="/assets/img/images/cases_img01.png" alt="" />
+                      <TabLeft />
                     </div>
                     <div className="cases-details-content">
                       <div className="icon">
@@ -254,7 +241,7 @@ const UseCases = () => {
                 >
                   <div className="cases-details-wrap">
                     <div className="cases-details-img">
-                      <img src="/assets/img/images/cases_img01.png" alt="" />
+                      <TabLeft />
                     </div>
                     <div className="cases-details-content">
                       <div className="icon">
@@ -307,7 +294,7 @@ const UseCases = () => {
                 >
                   <div className="cases-details-wrap">
                     <div className="cases-details-img">
-                      <img src="/assets/img/images/cases_img01.png" alt="" />
+                      <TabLeft />
                     </div>
                     <div className="cases-details-content">
                       <div className="icon">
