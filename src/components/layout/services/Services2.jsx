@@ -6,7 +6,10 @@ const Services2 = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xl-9 col-lg-10">
-            <div className="section-title-three text-center mb-70 title-animation">
+            <div
+              className="section-title-three text-center mb-70 title-animation wow fadeInUp"
+              data-wow-delay=".2s"
+            >
               <h2 className="title">
                 Engage your Audience With our <span>Voice Solutions</span>
               </h2>
@@ -108,9 +111,7 @@ const Services2 = () => {
               </div>
               <div className="services-content-two">
                 <h2 className="title">
-                  <Link to="/work">
-                    Text to speech for IVR and Switchboard
-                  </Link>
+                  <Link to="/work">Text to speech for IVR and Switchboard</Link>
                 </h2>
                 <p>Unlike anything you've unique..</p>
               </div>

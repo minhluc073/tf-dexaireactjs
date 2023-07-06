@@ -1,11 +1,14 @@
-const About2 = ()=> {
+const About2 = () => {
   return (
     <section className="about-area-two">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
             <div className="about-content-wrap">
-              <div className="section-title-three mb-50 title-animation">
+              <div
+                className="section-title-three mb-50 title-animation wow fadeInUp"
+                data-wow-delay=".2s"
+              >
                 <h2 className="title">
                   Mastering Content and Voiceover Creation{" "}
                   <span>in 3 Simple Steps</span>
@@ -48,5 +51,5 @@ const About2 = ()=> {
       </div>
     </section>
   );
-}
-export default About2
+};
+export default About2;
