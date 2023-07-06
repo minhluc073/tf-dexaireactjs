@@ -63,7 +63,10 @@ const Testimonial1 = () => {
         <div className="row justify-content-center">
           <div className="col-xl-10">
             <div className="section-title text-center mb-70">
-              <h2 className="title title-animation">
+              <h2
+                className="title title-animation wow fadeInUp"
+                data-wow-delay=".2s"
+              >
                 <span>6,000,000+</span> <br /> Professionals teams choose us
               </h2>
             </div>

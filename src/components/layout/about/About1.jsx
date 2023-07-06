@@ -22,7 +22,10 @@ export default function About1() {
                 >
                   <div className="row">
                     <div className="col-lg-7 order-0 order-lg-2">
-                      <div className="about-img">
+                      <div
+                        className="about-img wow fadeInRight"
+                        data-wow-delay=".2s"
+                      >
                         <img src="/assets/img/images/about_img.jpg" alt="" />
                         <VideoPopup />
                       </div>
@@ -30,7 +33,10 @@ export default function About1() {
                     <div className="col-lg-5">
                       <div className="about-content">
                         <div className="section-title-two mb-60">
-                          <h2 className="title">
+                          <h2
+                            className="title wow fadeInLeft"
+                            data-wow-delay=".2s"
+                          >
                             Used by over&nbsp;
                             <span>
                               <strong>

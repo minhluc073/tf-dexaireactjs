@@ -5,7 +5,7 @@ const Compare = () => {
         <div className="row justify-content-center">
           <div className="col-xl-7 col-lg-8">
             <div className="section-title-two text-center mb-70">
-              <h2 className="title">
+              <h2 className="title wow fadeInUp" data-wow-delay=".2s">
                 Say goodbye to expensive &nbsp;
                 <span>
                   traditional&nbsp;
@@ -91,10 +91,20 @@ const Compare = () => {
         </div>
       </div>
       <div className="compare-shape-wrap">
-        <img src="/assets/img/images/compare_shape01.png" alt="" data-aos="fade-left" data-aos-delay={300} />
-        <img src="/assets/img/images/compare_shape02.png" alt="" data-aos="fade-right" data-aos-delay={300} />
+        <img
+          src="/assets/img/images/compare_shape01.png"
+          alt=""
+          data-aos="fade-left"
+          data-aos-delay={300}
+        />
+        <img
+          src="/assets/img/images/compare_shape02.png"
+          alt=""
+          data-aos="fade-right"
+          data-aos-delay={300}
+        />
       </div>
     </section>
   );
-}
-export default Compare
+};
+export default Compare;

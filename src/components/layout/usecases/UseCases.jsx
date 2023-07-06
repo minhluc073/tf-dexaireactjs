@@ -14,7 +14,10 @@ const UseCases = () => {
           <div className="col-lg-5">
             <div className="use-cases-content">
               <div className="section-title mb-25">
-                <h2 className="title title-animation">
+                <h2
+                  className="title title-animation wow fadeInLeft"
+                  data-wow-delay=".2s"
+                >
                   AI Does it <span>faster</span> better.
                 </h2>
               </div>

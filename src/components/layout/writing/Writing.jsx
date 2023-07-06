@@ -7,7 +7,10 @@ const Writing = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="section-title text-center mb-80">
-              <h2 className="title title-animation">
+              <h2
+                className="title title-animation wow fadeInUp"
+                data-wow-delay=".2s"
+              >
                 Start writing <span>10x faster</span> with AI
               </h2>
             </div>
@@ -264,6 +267,6 @@ const Writing = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Writing
+export default Writing;

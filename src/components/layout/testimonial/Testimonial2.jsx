@@ -67,7 +67,7 @@ const Testimonial2 = () => {
         <div className="row justify-content-center">
           <div className="col-xl-6 col-lg-7">
             <div className="section-title-two text-center mb-70">
-              <h2 className="title">
+              <h2 className="title wow fadeInUp" data-wow-delay=".2s">
                 See why people like you &nbsp;
                 <span>
                   <strong>
@@ -331,5 +331,5 @@ const Testimonial2 = () => {
       </div>
     </section>
   );
-}
-export default Testimonial2
+};
+export default Testimonial2;

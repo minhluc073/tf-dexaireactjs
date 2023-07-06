@@ -1,11 +1,8 @@
 import Layout from "components/layout/Layout";
 import { Link } from "react-router-dom";
-import CountUp, { useCountUp } from 'react-countup';
+import CountUp, { useCountUp } from "react-countup";
 
 export default function About() {
- 
-  
-
   return (
     <Layout
       headerStyle={1}
@@ -28,7 +25,9 @@ export default function About() {
               </div>
               <div className="col-lg-12">
                 <div className="inner-about-content">
-                  <h2 className="title">Content Creation with AI</h2>
+                  <h2 className="title wow fadeInUp" data-wow-delay=".2s">
+                    Content Creation with AI
+                  </h2>
                   <div className="content-bottom">
                     <p>
                       At Dex.ai , we use artificial intelligence to generate
@@ -72,7 +71,9 @@ export default function About() {
             <div className="row">
               <div className="col-lg-12">
                 <div className="section-title-four text-center mb-60">
-                  <h2 className="title">Core Members</h2>
+                  <h2 className="title wow fadeInUp" data-wow-delay=".2s">
+                    Core Members
+                  </h2>
                 </div>
               </div>
             </div>
@@ -270,7 +271,7 @@ export default function About() {
               <div className="col-lg-7">
                 <div className="counter-content">
                   <div className="section-title-four mb-40">
-                    <h2 className="title">
+                    <h2 className="title wow fadeInLeft" data-wow-delay=".2s">
                       AI can write content just like humans can
                     </h2>
                   </div>
@@ -290,33 +291,57 @@ export default function About() {
                   <ul className="list-wrap">
                     <li>
                       <div className="counter-item-three">
-                            <h2 className="count">
-                              <CountUp end={1} suffix="M" duration={5}  enableScrollSpy scrollSpyDelay={5}/>
-                            </h2>
+                        <h2 className="count">
+                          <CountUp
+                            end={1}
+                            suffix="M"
+                            duration={5}
+                            enableScrollSpy
+                            scrollSpyDelay={5}
+                          />
+                        </h2>
                         <p>Our Top Clients</p>
                       </div>
                     </li>
                     <li>
                       <div className="counter-item-three">
-                            <h2 className="count">
-                            <CountUp  end={50} suffix="M" duration={5} enableScrollSpy scrollSpyDelay={5}/>
-                            </h2>
+                        <h2 className="count">
+                          <CountUp
+                            end={50}
+                            suffix="M"
+                            duration={5}
+                            enableScrollSpy
+                            scrollSpyDelay={5}
+                          />
+                        </h2>
                         <p>Social Media Platforms</p>
                       </div>
                     </li>
                     <li>
                       <div className="counter-item-three">
-                            <h2 className="count">
-                             <CountUp end={4} suffix="K" duration={5} enableScrollSpy scrollSpyDelay={5}/>
-                            </h2>
+                        <h2 className="count">
+                          <CountUp
+                            end={4}
+                            suffix="K"
+                            duration={5}
+                            enableScrollSpy
+                            scrollSpyDelay={5}
+                          />
+                        </h2>
                         <p>Powerful AI Tools</p>
                       </div>
                     </li>
                     <li>
                       <div className="counter-item-three">
-                            <h2 className="count">
-                               <CountUp end={10} suffix="M" duration={5} enableScrollSpy scrollSpyDelay={5}/>
-                            </h2>
+                        <h2 className="count">
+                          <CountUp
+                            end={10}
+                            suffix="M"
+                            duration={5}
+                            enableScrollSpy
+                            scrollSpyDelay={5}
+                          />
+                        </h2>
                         <p>Our Readers</p>
                       </div>
                     </li>

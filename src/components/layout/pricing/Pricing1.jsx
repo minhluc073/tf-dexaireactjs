@@ -10,7 +10,10 @@ const Pricing1 = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="section-title text-center mb-50">
-              <h2 className="title title-animation">
+              <h2
+                className="title title-animation wow fadeInUp"
+                data-wow-delay=".2s"
+              >
                 Money well <span>invested</span>
               </h2>
             </div>
@@ -217,5 +220,5 @@ const Pricing1 = () => {
       </div>
     </section>
   );
-}
-export default Pricing1
+};
+export default Pricing1;

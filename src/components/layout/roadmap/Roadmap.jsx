@@ -5,7 +5,10 @@ const Roadmap = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="section-title text-center mb-70">
-              <h2 className="title title-animation">
+              <h2
+                className="title title-animation wow fadeInUp"
+                data-wow-delay=".2s"
+              >
                 How it <span>works</span>
               </h2>
             </div>
@@ -89,5 +92,5 @@ const Roadmap = () => {
       </div>
     </section>
   );
-}
-export default Roadmap
+};
+export default Roadmap;
