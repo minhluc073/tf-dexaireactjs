@@ -1516,7 +1516,7 @@ label {
 }
 
 .banner-content-two .title {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     font-size: 75px;
     color: var(--tg-black-two);
     letter-spacing: -0.01em;
@@ -4586,7 +4586,7 @@ label {
 ===============================*/
 .compare-area {
     position: relative;
-    padding: 130px 0 100px;
+    padding: 140px 0 110px;
     background: var(--tg-white);
     z-index: 1;
     overflow: hidden;
@@ -4645,14 +4645,14 @@ label {
 }
 
 .compare-content {
-    padding: 25px 55px 45px;
+    padding: 23px 55px 45px;
     background: var(--tg-white);
 }
 
 .compare-content .title {
     color: var(--tg-black-two);
     font-size: 24px;
-    margin-bottom: 50px;
+    margin-bottom: 58px;
 }
 
 .compare-content .list-wrap li {
@@ -4674,7 +4674,7 @@ label {
     font-family: "Font Awesome 5 Pro";
     color: var(--tg-primary-color);
     font-size: 18px;
-    margin-right: 12px;
+    margin-right: 15px;
 }
 
 .compare-content .list-wrap.delete-item li::before {
@@ -4845,7 +4845,7 @@ label {
 .testimonial-area-two.testimonial-bg {
     background-size: cover;
     background-position: center;
-    padding: 130px 0 90px;
+    padding: 140px 0 100px;
     background-color: var(--tg-white);
     overflow: hidden;
 }
@@ -4857,7 +4857,7 @@ label {
 .testimonial-item-two {
     position: relative;
     z-index: 1;
-    padding: 30px 35px 35px;
+    padding: 30px 35px 45px;
     margin-bottom: 40px;
 }
 
