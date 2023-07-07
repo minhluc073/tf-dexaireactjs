@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Writing = () => {
   return (
-    <section className="writing-area pb-120">
+    <section className="writing-area pb-130">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

@@ -5,7 +5,7 @@ const Pricing1 = () => {
   const [isToggled, setToggled] = useState(false);
   const toggleTrueFalse = () => setToggled(!isToggled);
   return (
-    <section className="pricing-area pb-110">
+    <section className="pricing-area pb-105">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

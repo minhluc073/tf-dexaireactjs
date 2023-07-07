@@ -18,7 +18,7 @@ const UseCases = () => {
                   className="title title-animation wow fadeInLeft"
                   data-wow-delay=".2s"
                 >
-                  AI Does it <span>faster</span> better.
+                  AI Does it <span>faster</span> & better.
                 </h2>
               </div>
               <p>

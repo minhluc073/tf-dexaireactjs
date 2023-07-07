@@ -21,6 +21,18 @@
 		height: 600px;
 	}
 
+	.use-cases-nav-wrap,
+	.footer-widget.st1,
+	.footer-widget.st2,
+	.footer-widget.st3,
+	.tools-area .section-title .title {
+		margin-left: 0px;
+	}
+
+	.roadmap-item.st {
+		margin-top: 0px;
+	}
+
 	.banner-content .title {
 		font-size: 66px;
 	}

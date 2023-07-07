@@ -67,7 +67,7 @@ const Testimonial1 = () => {
                 className="title title-animation wow fadeInUp"
                 data-wow-delay=".2s"
               >
-                <span>6,000,000+</span> <br /> Professionals teams choose us
+                <span>6,000,000+</span> <br /> Professionals & teams choose us
               </h2>
             </div>
           </div>

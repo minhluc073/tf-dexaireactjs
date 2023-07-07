@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Select from "react-select";
-import chroma from "chroma-js";
 
 const countries = [
   {
@@ -243,7 +242,7 @@ const Speech = () => {
                     </div>
                   </div>
                   <div className="col-md-6">
-                    <div className="form-grp">
+                    <div className="form-grp cus-select">
                       <Select
                         defaultValue={punctuation[0]}
                         value={selectPunctuation}
@@ -260,7 +259,7 @@ const Speech = () => {
                     </div>
                   </div>
                   <div className="col-md-6">
-                    <div className="form-grp">
+                    <div className="form-grp cus-select">
                       <Select
                         defaultValue={filter[0]}
                         value={selectFilter}
@@ -277,7 +276,7 @@ const Speech = () => {
                     </div>
                   </div>
                   <div className="col-md-6">
-                    <div className="form-grp">
+                    <div className="form-grp cus-select">
                       <Select
                         defaultValue={countries[0]}
                         value={selectCountry}

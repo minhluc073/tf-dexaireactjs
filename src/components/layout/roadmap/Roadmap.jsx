@@ -65,7 +65,7 @@ const Roadmap = () => {
                   </div>
                 </li>
                 <li>
-                  <div className="roadmap-item">
+                  <div className="roadmap-item st">
                     <div
                       className="roadmap-img wow fadeInLeft"
                       data-wow-delay=".2s"

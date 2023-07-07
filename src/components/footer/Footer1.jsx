@@ -116,7 +116,7 @@ const Footer1 = () => {
                 </div>
               </div>
               <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div className="footer-widget">
+                <div className="footer-widget st1">
                   <h4 className="fw-title">company</h4>
                   <div className="footer-link">
                     <ul className="list-wrap">
@@ -140,7 +140,7 @@ const Footer1 = () => {
                 </div>
               </div>
               <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div className="footer-widget">
+                <div className="footer-widget st2">
                   <h4 className="fw-title">Product</h4>
                   <div className="footer-link">
                     <ul className="list-wrap">
@@ -164,7 +164,7 @@ const Footer1 = () => {
                 </div>
               </div>
               <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div className="footer-widget">
+                <div className="footer-widget st3">
                   <h4 className="fw-title">Need help?</h4>
                   <div className="footer-contact">
                     <Link to="tel:0123456789" className="phone">
@@ -230,7 +230,7 @@ const Footer1 = () => {
                 <div className="footer-menu">
                   <ul className="list-wrap">
                     <li>
-                      <Link to="/contact">Terms Conditions</Link>
+                      <Link to="/contact">Terms & Conditions</Link>
                     </li>
                     <li>
                       <Link to="/contact">Refund Policy</Link>

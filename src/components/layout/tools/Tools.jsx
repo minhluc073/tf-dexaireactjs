@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Tools() {
   return (
-    <section class="tools-area pb-140">
+    <section class="tools-area pb-135">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
