@@ -1156,7 +1156,15 @@ label {
     padding: 0px 0px;
     z-index: 5;
     box-shadow: -9px 0 14px 0px rgb(0 0 0 / 6%);
+
 }
+
+
+.mobile-menu .menu-box::-webkit-scrollbar {
+    display: none;
+}
+
+
 
 .mobile-menu-visible .mobile-menu .menu-box {
     opacity: 1;
@@ -1217,6 +1225,10 @@ label {
 
 .mobile-menu .navigation li>ul>li:first-child {
     border-top: 1px solid rgba(255 255 255 / 10%);
+}
+
+.mobile-menu .navigation li.active>h5 {
+    color: var(--tg-primary-color);
 }
 
 .mobile-menu .navigation li>h5,
@@ -1435,6 +1447,9 @@ label {
     color: var(--tg-black-three);
 }
 
+.mobile-menu .tg-mega-menu-has-children .ReactCollapse--collapse {
+    transition: height 1000ms;
+}
 
 /*=============================
 	04. Banner
@@ -3629,6 +3644,7 @@ label {
     color: var(--tg-black-two);
     display: flex;
     align-items: baseline;
+    margin-bottom: 5px;
 }
 
 .language-content .list-wrap li i {
@@ -3642,8 +3658,9 @@ label {
 
 .language-tab-wrap .nav-tabs {
     border-bottom: none;
-    gap: 20px;
+    gap: 22px;
     margin-top: 40px;
+    padding-left: 18px;
 }
 
 .language-tab-wrap .nav-tabs .nav-link {
@@ -3874,7 +3891,7 @@ label {
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-bottom: 70px;
+    margin-bottom: 81px;
 }
 
 .pricing-item-wrap-two .pricing-tab .tab-btn,
@@ -3948,6 +3965,8 @@ label {
     position: relative;
     z-index: 1;
 }
+
+
 
 .pricing-shape-wrap {
     position: absolute;
@@ -4081,7 +4100,7 @@ label {
     position: relative;
     padding-left: 26px;
     font-size: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
     color: var(--tg-gray-two);
 }
 
@@ -5043,6 +5062,14 @@ label {
 /*=============================
 	23. Faq
 ===============================*/
+.ReactCollapse--collapse {
+    transition: height 500ms;
+
+}
+
+
+
+
 .faq-wrap .accordion-button {
     color: var(--tg-white);
     background-color: transparent;
@@ -6517,6 +6544,7 @@ label {
 
 .error-content img {
     margin-bottom: 50px;
+    transition: unset;
 }
 
 .error-content span {

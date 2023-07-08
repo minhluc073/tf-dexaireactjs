@@ -1,6 +1,40 @@
 import Layout from "components/layout/Layout";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Collapse } from "react-collapse";
+
+const FAQ_ARR = [
+  {
+    title: "Can AI content writing replace human writers?",
+    key: 1,
+    content:
+      "AI content writing works by using machine learning algorithms to analyze vast amounts of data, including text, images, and videos, to generate unique and engaging content. The software learns from previous content and can mimic the style and tone of human writers.",
+  },
+  {
+    title: "How does AI content writing work?",
+    key: 2,
+    content:
+      "AI content writing works by using machine learning algorithms to analyze vast amounts of data, including text, images, and videos, to generate unique and engaging content. The software learns from previous content and can mimic the style and tone of human writers.",
+  },
+  {
+    title: "What is AI content writing?",
+    key: 3,
+    content:
+      "AI content writing works by using machine learning algorithms to analyze vast amounts of data, including text, images, and videos, to generate unique and engaging content. The software learns from previous content and can mimic the style and tone of human writers.",
+  },
+  {
+    title: "What are the benefits of using AI content writing?",
+    key: 4,
+    content:
+      "AI content writing works by using machine learning algorithms to analyze vast amounts of data, including text, images, and videos, to generate unique and engaging content. The software learns from previous content and can mimic the style and tone of human writers.",
+  },
+  {
+    title: "Is AI content writing ethical?",
+    key: 5,
+    content:
+      "AI content writing works by using machine learning algorithms to analyze vast amounts of data, including text, images, and videos, to generate unique and engaging content. The software learns from previous content and can mimic the style and tone of human writers.",
+  },
+];
 
 export default function Help() {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -117,238 +151,44 @@ export default function Help() {
                         }
                       >
                         <div className="faq-wrap">
-                          <div className="accordion" id="accordionExample">
-                            <div
-                              className={
-                                isActive.key == 1
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(1)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 1
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseOne"
-                                  aria-expanded="true"
-                                  aria-controls="collapseOne"
-                                >
-                                  Can AI content writing replace human writers?
-                                </button>
-                              </h2>
+                          <div className="accordion">
+                            {FAQ_ARR.map((faq) => (
                               <div
-                                id="collapseOne"
                                 className={
-                                  isActive.key == 1
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
+                                  isActive.key === faq?.key
+                                    ? "accordion-item active"
+                                    : "accordion-item"
                                 }
-                                data-bs-parent="#accordionExample"
+                                key={faq?.key}
                               >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
+                                <h2 className="accordion-header">
+                                  <button
+                                    className={
+                                      isActive.key === faq?.key
+                                        ? "accordion-button"
+                                        : "accordion-button collapsed"
+                                    }
+                                    type="button"
+                                    onClick={() => handleToggle(faq?.key)}
+                                  >
+                                    {faq?.title}
+                                  </button>
+                                </h2>
+                                <Collapse isOpened={isActive.key === faq?.key}>
+                                  <div
+                                    className={
+                                      isActive.key === faq?.key
+                                        ? "accordion-collapse collapse show"
+                                        : "accordion-collapse collapse"
+                                    }
+                                  >
+                                    <div className="accordion-body">
+                                      <p>{faq?.content}</p>
+                                    </div>
+                                  </div>
+                                </Collapse>
                               </div>
-                            </div>
-                            <div
-                              className={
-                                isActive.key == 2
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(2)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 2
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseTwo"
-                                  aria-expanded="false"
-                                  aria-controls="collapseTwo"
-                                >
-                                  How does AI content writing work?
-                                </button>
-                              </h2>
-                              <div
-                                id="collapseTwo"
-                                className={
-                                  isActive.key == 2
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
-                                }
-                                data-bs-parent="#accordionExample"
-                              >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              className={
-                                isActive.key == 3
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(3)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 3
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseThree"
-                                  aria-expanded="false"
-                                  aria-controls="collapseThree"
-                                >
-                                  What is AI content writing?
-                                </button>
-                              </h2>
-                              <div
-                                id="collapseThree"
-                                className={
-                                  isActive.key == 3
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
-                                }
-                                data-bs-parent="#accordionExample"
-                              >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              className={
-                                isActive.key == 4
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(4)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 4
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseFour"
-                                  aria-expanded="false"
-                                  aria-controls="collapseFour"
-                                >
-                                  What are the benefits of using AI content
-                                  writing?
-                                </button>
-                              </h2>
-                              <div
-                                id="collapseFour"
-                                className={
-                                  isActive.key == 4
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
-                                }
-                                data-bs-parent="#accordionExample"
-                              >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              className={
-                                isActive.key == 5
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(5)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 5
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseFive"
-                                  aria-expanded="false"
-                                  aria-controls="collapseFive"
-                                >
-                                  Is AI content writing ethical?
-                                </button>
-                              </h2>
-                              <div
-                                id="collapseFive"
-                                className={
-                                  isActive.key == 5
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
-                                }
-                                data-bs-parent="#accordionExample"
-                              >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
+                            ))}
                           </div>
                         </div>
                       </div>
@@ -360,238 +200,44 @@ export default function Help() {
                         }
                       >
                         <div className="faq-wrap">
-                          <div className="accordion" id="accordionExample">
-                            <div
-                              className={
-                                isActive.key == 6
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(6)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 6
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseOne"
-                                  aria-expanded="true"
-                                  aria-controls="collapseOne"
-                                >
-                                  Can AI content writing replace human writers?
-                                </button>
-                              </h2>
+                          <div className="accordion">
+                            {FAQ_ARR.map((faq) => (
                               <div
-                                id="collapseOne"
                                 className={
-                                  isActive.key == 6
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
+                                  isActive.key === faq?.key
+                                    ? "accordion-item active"
+                                    : "accordion-item"
                                 }
-                                data-bs-parent="#accordionExample"
+                                key={faq?.key}
                               >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
+                                <h2 className="accordion-header">
+                                  <button
+                                    className={
+                                      isActive.key === faq?.key
+                                        ? "accordion-button"
+                                        : "accordion-button collapsed"
+                                    }
+                                    type="button"
+                                    onClick={() => handleToggle(faq?.key)}
+                                  >
+                                    {faq?.title}
+                                  </button>
+                                </h2>
+                                <Collapse isOpened={isActive.key === faq?.key}>
+                                  <div
+                                    className={
+                                      isActive.key === faq?.key
+                                        ? "accordion-collapse collapse show"
+                                        : "accordion-collapse collapse"
+                                    }
+                                  >
+                                    <div className="accordion-body">
+                                      <p>{faq?.content}</p>
+                                    </div>
+                                  </div>
+                                </Collapse>
                               </div>
-                            </div>
-                            <div
-                              className={
-                                isActive.key == 7
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(7)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 7
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseTwo"
-                                  aria-expanded="false"
-                                  aria-controls="collapseTwo"
-                                >
-                                  How does AI content writing work?
-                                </button>
-                              </h2>
-                              <div
-                                id="collapseTwo"
-                                className={
-                                  isActive.key == 7
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
-                                }
-                                data-bs-parent="#accordionExample"
-                              >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              className={
-                                isActive.key == 8
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(8)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 8
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseThree"
-                                  aria-expanded="false"
-                                  aria-controls="collapseThree"
-                                >
-                                  What is AI content writing?
-                                </button>
-                              </h2>
-                              <div
-                                id="collapseThree"
-                                className={
-                                  isActive.key == 8
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
-                                }
-                                data-bs-parent="#accordionExample"
-                              >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              className={
-                                isActive.key == 9
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(9)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 9
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseFour"
-                                  aria-expanded="false"
-                                  aria-controls="collapseFour"
-                                >
-                                  What are the benefits of using AI content
-                                  writing?
-                                </button>
-                              </h2>
-                              <div
-                                id="collapseFour"
-                                className={
-                                  isActive.key == 9
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
-                                }
-                                data-bs-parent="#accordionExample"
-                              >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              className={
-                                isActive.key == 10
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(10)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 10
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseFive"
-                                  aria-expanded="false"
-                                  aria-controls="collapseFive"
-                                >
-                                  Is AI content writing ethical?
-                                </button>
-                              </h2>
-                              <div
-                                id="collapseFive"
-                                className={
-                                  isActive.key == 10
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
-                                }
-                                data-bs-parent="#accordionExample"
-                              >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
+                            ))}
                           </div>
                         </div>
                       </div>
@@ -603,238 +249,44 @@ export default function Help() {
                         }
                       >
                         <div className="faq-wrap">
-                          <div className="accordion" id="accordionExample">
-                            <div
-                              className={
-                                isActive.key == 11
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(11)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 11
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseOne"
-                                  aria-expanded="true"
-                                  aria-controls="collapseOne"
-                                >
-                                  Can AI content writing replace human writers?
-                                </button>
-                              </h2>
+                          <div className="accordion">
+                            {FAQ_ARR.map((faq) => (
                               <div
-                                id="collapseOne"
                                 className={
-                                  isActive.key == 11
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
+                                  isActive.key === faq?.key
+                                    ? "accordion-item active"
+                                    : "accordion-item"
                                 }
-                                data-bs-parent="#accordionExample"
+                                key={faq?.key}
                               >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
+                                <h2 className="accordion-header">
+                                  <button
+                                    className={
+                                      isActive.key === faq?.key
+                                        ? "accordion-button"
+                                        : "accordion-button collapsed"
+                                    }
+                                    type="button"
+                                    onClick={() => handleToggle(faq?.key)}
+                                  >
+                                    {faq?.title}
+                                  </button>
+                                </h2>
+                                <Collapse isOpened={isActive.key === faq?.key}>
+                                  <div
+                                    className={
+                                      isActive.key === faq?.key
+                                        ? "accordion-collapse collapse show"
+                                        : "accordion-collapse collapse"
+                                    }
+                                  >
+                                    <div className="accordion-body">
+                                      <p>{faq?.content}</p>
+                                    </div>
+                                  </div>
+                                </Collapse>
                               </div>
-                            </div>
-                            <div
-                              className={
-                                isActive.key == 12
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(12)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 12
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseTwo"
-                                  aria-expanded="false"
-                                  aria-controls="collapseTwo"
-                                >
-                                  How does AI content writing work?
-                                </button>
-                              </h2>
-                              <div
-                                id="collapseTwo"
-                                className={
-                                  isActive.key == 12
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
-                                }
-                                data-bs-parent="#accordionExample"
-                              >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              className={
-                                isActive.key == 13
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(13)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 13
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseThree"
-                                  aria-expanded="false"
-                                  aria-controls="collapseThree"
-                                >
-                                  What is AI content writing?
-                                </button>
-                              </h2>
-                              <div
-                                id="collapseThree"
-                                className={
-                                  isActive.key == 13
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
-                                }
-                                data-bs-parent="#accordionExample"
-                              >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              className={
-                                isActive.key == 14
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(14)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 14
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseFour"
-                                  aria-expanded="false"
-                                  aria-controls="collapseFour"
-                                >
-                                  What are the benefits of using AI content
-                                  writing?
-                                </button>
-                              </h2>
-                              <div
-                                id="collapseFour"
-                                className={
-                                  isActive.key == 14
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
-                                }
-                                data-bs-parent="#accordionExample"
-                              >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              className={
-                                isActive.key == 15
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(15)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 15
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseFive"
-                                  aria-expanded="false"
-                                  aria-controls="collapseFive"
-                                >
-                                  Is AI content writing ethical?
-                                </button>
-                              </h2>
-                              <div
-                                id="collapseFive"
-                                className={
-                                  isActive.key == 15
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
-                                }
-                                data-bs-parent="#accordionExample"
-                              >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
+                            ))}
                           </div>
                         </div>
                       </div>
@@ -846,238 +298,44 @@ export default function Help() {
                         }
                       >
                         <div className="faq-wrap">
-                          <div className="accordion" id="accordionExample">
-                            <div
-                              className={
-                                isActive.key == 16
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(16)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 16
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseOne"
-                                  aria-expanded="true"
-                                  aria-controls="collapseOne"
-                                >
-                                  Can AI content writing replace human writers?
-                                </button>
-                              </h2>
+                          <div className="accordion">
+                            {FAQ_ARR.map((faq) => (
                               <div
-                                id="collapseOne"
                                 className={
-                                  isActive.key == 16
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
+                                  isActive.key === faq?.key
+                                    ? "accordion-item active"
+                                    : "accordion-item"
                                 }
-                                data-bs-parent="#accordionExample"
+                                key={faq?.key}
                               >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
+                                <h2 className="accordion-header">
+                                  <button
+                                    className={
+                                      isActive.key === faq?.key
+                                        ? "accordion-button"
+                                        : "accordion-button collapsed"
+                                    }
+                                    type="button"
+                                    onClick={() => handleToggle(faq?.key)}
+                                  >
+                                    {faq?.title}
+                                  </button>
+                                </h2>
+                                <Collapse isOpened={isActive.key === faq?.key}>
+                                  <div
+                                    className={
+                                      isActive.key === faq?.key
+                                        ? "accordion-collapse collapse show"
+                                        : "accordion-collapse collapse"
+                                    }
+                                  >
+                                    <div className="accordion-body">
+                                      <p>{faq?.content}</p>
+                                    </div>
+                                  </div>
+                                </Collapse>
                               </div>
-                            </div>
-                            <div
-                              className={
-                                isActive.key == 17
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(17)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 17
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseTwo"
-                                  aria-expanded="false"
-                                  aria-controls="collapseTwo"
-                                >
-                                  How does AI content writing work?
-                                </button>
-                              </h2>
-                              <div
-                                id="collapseTwo"
-                                className={
-                                  isActive.key == 17
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
-                                }
-                                data-bs-parent="#accordionExample"
-                              >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              className={
-                                isActive.key == 18
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(18)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 18
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseThree"
-                                  aria-expanded="false"
-                                  aria-controls="collapseThree"
-                                >
-                                  What is AI content writing?
-                                </button>
-                              </h2>
-                              <div
-                                id="collapseThree"
-                                className={
-                                  isActive.key == 18
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
-                                }
-                                data-bs-parent="#accordionExample"
-                              >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              className={
-                                isActive.key == 19
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(19)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 19
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseFour"
-                                  aria-expanded="false"
-                                  aria-controls="collapseFour"
-                                >
-                                  What are the benefits of using AI content
-                                  writing?
-                                </button>
-                              </h2>
-                              <div
-                                id="collapseFour"
-                                className={
-                                  isActive.key == 19
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
-                                }
-                                data-bs-parent="#accordionExample"
-                              >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              className={
-                                isActive.key == 20
-                                  ? "accordion-item active"
-                                  : "accordion-item"
-                              }
-                              onClick={() => handleToggle(20)}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={
-                                    isActive.key == 20
-                                      ? "accordion-button"
-                                      : "accordion-button collapsed"
-                                  }
-                                  type="button"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#collapseFive"
-                                  aria-expanded="false"
-                                  aria-controls="collapseFive"
-                                >
-                                  Is AI content writing ethical?
-                                </button>
-                              </h2>
-                              <div
-                                id="collapseFive"
-                                className={
-                                  isActive.key == 20
-                                    ? "accordion-collapse collapse show"
-                                    : "accordion-collapse collapse"
-                                }
-                                data-bs-parent="#accordionExample"
-                              >
-                                <div className="accordion-body">
-                                  <p>
-                                    AI content writing works by using machine
-                                    learning algorithms to analyze vast amounts
-                                    of data, including text, images, and videos,
-                                    to generate unique and engaging content. The
-                                    software learns from previous content and
-                                    can mimic the style and tone of human
-                                    writers.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
+                            ))}
                           </div>
                         </div>
                       </div>

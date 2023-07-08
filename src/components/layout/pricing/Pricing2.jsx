@@ -9,7 +9,7 @@ const Pricing2 = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xl-6 col-lg-8">
-            <div className="section-title-two text-center mb-50">
+            <div className="section-title-two text-center mb-55">
               <h2 className="title wow fadeInUp" data-wow-delay=".2s">
                 Plans for&nbsp;
                 <span>
@@ -48,7 +48,7 @@ const Pricing2 = () => {
                       </defs>
                     </svg>
                   </strong>
-                  content&nbsp;
+                  &nbsp;content &nbsp;
                 </span>
                 creation strategy
               </h2>

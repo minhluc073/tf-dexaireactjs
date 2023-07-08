@@ -75,7 +75,7 @@ const Header1 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
                       <li
                         className={`${
                           isActive === "home" ? "active" : ""
-                        } menu-item-has-children tg-mega-menu-has-children `}
+                        } menu-item-has-children tg-mega-menu-has-children`}
                         onClick={() => handleActive("home")}
                       >
                         <Link to="#">Home</Link>
@@ -272,7 +272,7 @@ const Header1 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
                     </Link>
                   </div>
                   <div className="menu-outer">
-                    <MenuMobile handleCloseMenu={handleMobileMenu}/>
+                    <MenuMobile handleCloseMenu={handleMobileMenu} />
                   </div>
                   <div className="social-links">
                     <ul className="clearfix list-wrap">

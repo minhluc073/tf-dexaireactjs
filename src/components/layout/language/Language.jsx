@@ -8,7 +8,7 @@ const Language = () => {
     setActiveIndex(index);
   };
   return (
-    <section className="language-area pb-140">
+    <section className="language-area pb-150">
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
@@ -75,7 +75,7 @@ const Language = () => {
                 </li>
               </ul>
               <Link to="/work" className="gradient-btn gradient-btn-three">
-                hear text languages
+                hear & text languages
               </Link>
             </div>
           </div>

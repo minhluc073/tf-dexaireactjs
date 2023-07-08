@@ -7,7 +7,7 @@ export default function Services1() {
     setActiveIndex(index);
   };
   return (
-    <section className="services-area pb-110">
+    <section className="services-area pb-125">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xl-7 col-lg-9">

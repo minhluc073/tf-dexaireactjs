@@ -728,6 +728,9 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (max-width: 991.98px) {
+	.language-tab-wrap .nav-tabs {
+		padding-left: 0px;
+	}
 
 	.container,
 	.custom-container {

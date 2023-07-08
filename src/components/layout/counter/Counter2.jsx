@@ -50,7 +50,7 @@ const settings = {
 
 const Counter2 = () => {
   return (
-    <section className="counter-area-two pt-110">
+    <section className="counter-area-two pt-120">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
