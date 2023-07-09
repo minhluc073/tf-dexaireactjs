@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Services2 = () => {
   return (
-    <section className="services-area-two pt-130 pb-120">
+    <section className="services-area-two pt-140 pb-125">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xl-9 col-lg-10">

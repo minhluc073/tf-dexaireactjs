@@ -13,9 +13,9 @@ const Banner3 = () => {
                 Technology Transform Your <span>Words into Voice</span>
               </h2>
               <p className="wow fadeInUp" data-wow-delay=".4s">
-                Artificial intelligence makes it fast easy to create content for
-                your blog, social media, website, and more! Rated 5/5 stars in
-                3,000+ reviews.
+                Artificial intelligence makes it fast & easy to create content
+                for your blog, social media, website, and more! Rated 5/5 stars
+                in 3,000+ reviews.
               </p>
             </div>
           </div>
@@ -23,5 +23,5 @@ const Banner3 = () => {
       </div>
     </section>
   );
-}
-export default Banner3
+};
+export default Banner3;

@@ -1227,8 +1227,17 @@ label {
     border-top: 1px solid rgba(255 255 255 / 10%);
 }
 
+.menu-area-three .mobile-menu .menu-item-has-children.active>a,
+.menu-area-three .mobile-menu .mega-menu-item.active .title a,
+.menu-area-three .mobile-menu .navigation li.active>h5 {
+    color: var(--tg-cyan) !important;
+}
+
+.mobile-menu .menusub-link.active a,
+.mobile-menu .menu-item-has-children.active>a,
+.mobile-menu .mega-menu-item.active .title a,
 .mobile-menu .navigation li.active>h5 {
-    color: var(--tg-primary-color);
+    color: var(--tg-primary-color) !important;
 }
 
 .mobile-menu .navigation li>h5,
@@ -1708,7 +1717,7 @@ label {
 .banner-area-three {
     background: var(--tg-black-three);
     position: relative;
-    padding: 200px 0 110px;
+    padding: 168px 0 105px;
     z-index: 1;
 }
 
@@ -1732,7 +1741,7 @@ label {
     font-weight: 600;
     font-size: 74px;
     letter-spacing: -0.02em;
-    margin-bottom: 20px;
+    margin-bottom: 27px;
 }
 
 .banner-content-three .title span {
@@ -2389,7 +2398,7 @@ label {
     box-shadow: 0px 19px 10px rgba(0, 0, 0, 0.06);
     border-radius: 20px;
     background: var(--tg-black-four);
-    padding: 50px 40px 45px;
+    padding: 50px 20px 45px 50px;
     position: relative;
     z-index: 1;
     margin-bottom: 10px;
@@ -2552,7 +2561,7 @@ label {
 
 .counter-item-wrap {
     background: var(--tg-white);
-    padding: 90px 65px 50px;
+    padding: 88px 65px 60px;
     border-radius: 30px 0 0 30px;
     background-size: cover;
     background-position: center;
@@ -2565,12 +2574,20 @@ label {
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--tg-black-two);
-    margin-bottom: 70px;
+    margin-bottom: 67px;
 }
 
 .counter-item-two {
     text-align: center;
     margin-bottom: 30px;
+}
+
+.counter-item-two.st1 {
+    margin-left: 58px;
+}
+
+.counter-item-two.st2 {
+    margin-left: 52px;
 }
 
 .counter-item-two .count {
@@ -2580,7 +2597,7 @@ label {
     background-clip: text;
     font-weight: 700;
     font-size: 60px;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     line-height: .8;
 }
 
@@ -2899,7 +2916,7 @@ label {
 ===============================*/
 .speech-area {
     position: relative;
-    padding: 0 0 100px;
+    padding: 0 0 120px;
     z-index: 1;
     background: var(--tg-black-three);
 }
@@ -3894,6 +3911,10 @@ label {
     margin-bottom: 81px;
 }
 
+.pricing-item-wrap .pricing-tab {
+    margin-bottom: 70px;
+}
+
 .pricing-item-wrap-two .pricing-tab .tab-btn,
 .pricing-item-wrap .pricing-tab .tab-btn {
     cursor: pointer;
@@ -3958,7 +3979,7 @@ label {
 .area-bg {
     background-size: cover;
     background-position: center;
-    padding: 135px 0 140px;
+    padding: 135px 0 146px;
 }
 
 .pricing-area-two {
@@ -4210,7 +4231,7 @@ label {
 
 .pricing-item-three {
     border-radius: 20px;
-    padding: 45px 40px 50px;
+    padding: 42px 41px 50px;
     background: var(--tg-black-four);
     margin-bottom: 10px;
     position: relative;
@@ -6910,6 +6931,15 @@ label {
     gap: 10px 25px;
 }
 
+.footer-area-two .footer-menu .list-wrap {
+    gap: 10px 30px;
+}
+
+.footer-area-two .footer-top-two {
+    padding: 100px 0 52px;
+
+}
+
 .footer-menu .list-wrap li a {
     font-size: 15px;
     color: var(--tg-paragraph-color);
@@ -6954,7 +6984,7 @@ label {
     position: relative;
     background: var(--tg-white);
     border-radius: 0 0 25px 25px;
-    padding: 95px 0 60px;
+    padding: 100px 0 60px;
 }
 
 .footer-features-wrap {
@@ -6967,6 +6997,38 @@ label {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+}
+
+.footer-area-two .footer-features-item.st1 {
+    margin-left: 83px;
+}
+
+.footer-area-two .footer-features-item.st2 {
+    margin-left: 136px;
+}
+
+.footer-area-two .fw-title-two {
+    margin-bottom: 35px;
+}
+
+.footer-area-two .footer-widget.st1 {
+    margin-left: 4px;
+}
+
+.footer-area-two .footer-widget.st2 {
+    margin-left: 10px;
+}
+
+.footer-area-two .footer-widget.st3 {
+    margin-left: 16px;
+}
+
+.footer-area-two .footer-widget.st4 {
+    margin-left: 22px;
+}
+
+.footer-area-two .footer-features-wrap {
+    margin-bottom: 66px;
 }
 
 .footer-features-item .icon {
@@ -6986,7 +7048,7 @@ label {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -56px;
+    bottom: -52px;
     width: 100%;
     height: 2px;
     background: var(--tg-black-two);

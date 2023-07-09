@@ -72,13 +72,13 @@ const Counter2 = () => {
                         </div>
                       </div>
                       <div className="col-md-4">
-                        <div className="counter-item-two">
+                        <div className="counter-item-two st1">
                           <h2 className="count">24M</h2>
                           <p>Videos Created</p>
                         </div>
                       </div>
                       <div className="col-md-4">
-                        <div className="counter-item-two">
+                        <div className="counter-item-two st2">
                           <h2 className="count">#4</h2>
                           <p>Rated on G2</p>
                         </div>

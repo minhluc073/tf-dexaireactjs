@@ -8,7 +8,7 @@ const Voices = () => {
     setActiveIndex(index);
   };
   return (
-    <section className="vioces-area pt-130 pb-120">
+    <section className="vioces-area pt-110 pb-140">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xl-9 col-lg-10">

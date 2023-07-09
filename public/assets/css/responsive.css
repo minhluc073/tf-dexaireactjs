@@ -25,7 +25,15 @@
 	.footer-widget.st1,
 	.footer-widget.st2,
 	.footer-widget.st3,
-	.tools-area .section-title .title {
+	.tools-area .section-title .title,
+	.counter-item-two.st1,
+	.counter-item-two.st2,
+	.footer-area-two .footer-features-item.st1,
+	.footer-area-two .footer-features-item.st2,
+	.footer-area-two .footer-widget.st1,
+	.footer-area-two .footer-widget.st2,
+	.footer-area-two .footer-widget.st3,
+	.footer-area-two .footer-widget.st4 {
 		margin-left: 0px;
 	}
 
@@ -1278,6 +1286,8 @@
 		flex-wrap: wrap;
 	}
 
+	.banner-content-two .title strong svg,
+	.section-title-two .title span strong svg,
 	.banner-content .title.ah-headline {
 		display: none;
 	}
@@ -1503,6 +1513,7 @@
 
 	.brand-item-wrap .title {
 		margin-bottom: 40px;
+		padding: 0px 15px;
 	}
 
 	.brand-item-two {
@@ -2073,6 +2084,7 @@
 	.banner-shape-wrap img:nth-child(1) {
 		top: 31%;
 		width: 80px;
+		display: none;
 	}
 
 	.job-item {

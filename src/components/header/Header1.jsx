@@ -2,14 +2,15 @@ import LanguageDropdown from "./LanguageDropdown";
 import { Link, useLocation } from "react-router-dom";
 import MenuMobile from "./MenuMobile";
 import { useCallback, useEffect, useState } from "react";
+
 const Header1 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
   const { pathname } = useLocation();
-  const [isActive, setIsActive] = useState("home");
+  const [isActive, setIsActive] = useState("home1");
 
   useEffect(() => {
     if (pathname) {
       let activePath = pathname.slice(1, pathname.length);
-      setIsActive(activePath ? activePath : "home");
+      setIsActive(activePath ? activePath : "home1");
     }
   }, [pathname]);
 
@@ -24,6 +25,14 @@ const Header1 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
         case "login":
         case "404":
         case "job": {
+          return true;
+        }
+        default:
+          return false;
+      }
+    } else if (param === "home") {
+      switch (isActive) {
+        case "home1": {
           return true;
         }
         default:
@@ -74,7 +83,7 @@ const Header1 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
                     <ul className="navigation">
                       <li
                         className={`${
-                          isActive === "home" ? "active" : ""
+                          checkActive("home") ? "active" : ""
                         } menu-item-has-children tg-mega-menu-has-children`}
                         onClick={() => handleActive("home")}
                       >
@@ -82,7 +91,15 @@ const Header1 = ({ scroll, isMobileMenu, handleMobileMenu }) => {
                         <div className="tg-mega-menu-wrap black-bg">
                           <div className="row row-cols-1 row-cols-lg-4 row-cols-xl-4">
                             <div className="col">
-                              <div className="mega-menu-item active">
+                              <div
+                                className={`${
+                                  isActive === "home1" ? "active" : ""
+                                } mega-menu-item`}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleActive("home1");
+                                }}
+                              >
                                 <div className="mega-menu-thumb">
                                   <Link to="/">
                                     <img
