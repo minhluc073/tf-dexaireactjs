@@ -1246,6 +1246,7 @@
 	}
 
 	.login-area {
+		align-items: unset;
 		padding: 140px 0px 80px;
 	}
 
