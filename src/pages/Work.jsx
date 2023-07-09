@@ -1,11 +1,17 @@
 import Layout from "components/layout/Layout";
 
-const Work = ()=> {
+const Work = () => {
   return (
     <Layout
       headerStyle={1}
       footerStyle={1}
-      breadcrumbTitle={ <> How it’s <span>Work</span></> }>
+      breadcrumbTitle={
+        <>
+          {" "}
+          How it’s <span>Work</span>
+        </>
+      }
+    >
       <section className="work-area">
         <div className="container">
           <div className="row">
@@ -96,5 +102,5 @@ const Work = ()=> {
       </section>
     </Layout>
   );
-}
-export default Work
+};
+export default Work;

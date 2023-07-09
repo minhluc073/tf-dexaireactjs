@@ -15,7 +15,7 @@ export default function About() {
     >
       <div>
         {/* about-area */}
-        <section className="inner-about-area pb-115">
+        <section className="inner-about-area pb-100">
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
@@ -66,7 +66,7 @@ export default function About() {
         </section>
         {/* about-area-end */}
         {/* team-area */}
-        <section className="team-area pb-100">
+        <section className="team-area pb-120">
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
@@ -78,7 +78,7 @@ export default function About() {
               </div>
             </div>
             <div className="row justify-content-center">
-              <div className="col-lg-6 col-md-8">
+              <div className="col-md-6">
                 <div className="team-item">
                   <div className="team-thumb">
                     <img src="assets/img/team/team_img01.jpg" alt="" />
@@ -121,7 +121,7 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6 col-md-8">
+              <div className="col-md-6">
                 <div className="team-item">
                   <div className="team-thumb">
                     <img src="assets/img/team/team_img02.jpg" alt="" />
@@ -265,7 +265,7 @@ export default function About() {
         </section>
         {/* team-area-end */}
         {/* counter-area */}
-        <section className="counter-area-three pb-130">
+        <section className="counter-area-three pb-160">
           <div className="container">
             <div className="row">
               <div className="col-lg-7">

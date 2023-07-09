@@ -43,7 +43,7 @@ export default function Help() {
   };
   const [isActive, setIsActive] = useState({
     status: false,
-    key: 1,
+    key: 2,
   });
 
   const handleToggle = (key) => {
@@ -351,7 +351,7 @@ export default function Help() {
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-xl-6 col-lg-8">
-                  <div className="help-title text-center mb-70">
+                  <div className="help-title text-center mb-75">
                     <h2 className="title">
                       You still have a <span>question?</span>
                     </h2>
@@ -363,7 +363,7 @@ export default function Help() {
                 </div>
               </div>
               <div className="row justify-content-center">
-                <div className="col-xl-8 col-lg-10">
+                <div className="col-xl-9 col-lg-10">
                   <div className="help-center-wrap">
                     <div className="row">
                       <div className="col-md-6">

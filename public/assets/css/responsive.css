@@ -33,7 +33,12 @@
 	.footer-area-two .footer-widget.st1,
 	.footer-area-two .footer-widget.st2,
 	.footer-area-two .footer-widget.st3,
-	.footer-area-two .footer-widget.st4 {
+	.footer-area-two .footer-widget.st4,
+	.pricing-top-content-two .pricing-plan,
+	.footer-area-three .footer-widget.st1,
+	.footer-area-three .footer-widget.st2,
+	.footer-area-three .footer-widget.st3,
+	.footer-area-three .footer-widget.st4 {
 		margin-left: 0px;
 	}
 
@@ -1663,6 +1668,7 @@
 
 	.brand-wrap-three .title {
 		margin-bottom: 40px;
+		padding: 0px 15px;
 	}
 
 	.brand-item-three {
