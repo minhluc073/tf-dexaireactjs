@@ -2271,3 +2271,9 @@
 	}
 
 }
+
+@media (max-width: 425px) {
+	.language-content .section-title-two .title span strong {
+		display: block;
+	}
+}

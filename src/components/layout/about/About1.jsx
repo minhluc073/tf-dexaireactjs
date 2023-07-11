@@ -40,7 +40,7 @@ export default function About1() {
                             Used by over&nbsp;
                             <span>
                               <strong>
-                                40,000
+                                40,000 &nbsp;
                                 <svg
                                   viewBox="0 0 345 23"
                                   fill="none"

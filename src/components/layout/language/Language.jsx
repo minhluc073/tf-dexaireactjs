@@ -17,9 +17,9 @@ const Language = () => {
                 <h2 className="title wow fadeInLeft" data-wow-delay=".2s">
                   Quality Text to voice recordings&nbsp;
                   <span>
-                    With &nbsp;
+                    With&nbsp;
                     <strong>
-                      DEX.AI&nbsp;
+                      DEX.AI
                       <svg
                         viewBox="0 0 345 23"
                         fill="none"
